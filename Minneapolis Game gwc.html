@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+<head style="font-family:arial;">
+
+<title> Personality Quiz </title>
+<style>
+div{
+  font-family: arial, sans-serif;
+}
+.left{
+  float:left;
+  width: 50%;
+
+}
+
+
+</style>
+</head>
+
+<body>
+<div>
+<h2 align="center"> What Minneapolis Destination Should You Go To? </h1>
+</div>
+<br/>
+<br/>
+
+<div id = "myDiv1" class= "left" align="center">
+<input type="button" value = "submit" onclick="getAnswer1Input()">
+<br/>
+
+hello
+</div>
+
+<div id = "myDiv2" class= "left" align="center">
+<input type="button" value = "submit" onclick="getAnswer2Input()">
+<br/>
+
+hello
+</div>
+
+<script type = "text/javascript">
+
+
+  function getRadioInput(){
+
+    var resultString = "You are ";
+    var Bl=0;
+    var s =0;
+    var l =0;
+    var Ba=0;
+
+    if (document.getElementById("color1").checked){
+      s += 1
+
+    }
+    else if (document.getElementById("color2").checked) {
+      Bl += 1
+
+    }
+    else if (document.getElementById("color3").checked) {
+      Ba += 1
+
+    }
+    else if (document.getElementById("color4").checked) {
+      l += 1
+
+    }
+    if (document.getElementById("activity1").checked){
+      Ba += 1
+
+    }
+    else if (document.getElementById("activity2").checked) {
+      Bl += 1
+
+    }
+    else if (document.getElementById("activity3").checked) {
+      s += 1
+
+    }
+    else if (document.getElementById("activity4").checked) {
+      l += 1
+
+    }
+
+    if (document.getElementById("movie1").checked){
+      s += 1
+
+    }
+    else if (document.getElementById("movie2").checked) {
+      Ba += 1
+
+    }
+    else if (document.getElementById("movie3").checked) {
+      Bl += 1
+
+    }
+    else if (document.getElementById("movie4").checked) {
+      l += 1
+
+    }
+
+    if (document.getElementById("hero1").checked){
+      l += 1
+
+    }
+    else if (document.getElementById("hero2").checked) {
+      Bl += 1
+
+    }
+    else if (document.getElementById("hero3").checked) {
+      s += 1
+
+    }
+    else if (document.getElementById("hero4").checked) {
+      Ba += 1
+
+    }
+
+
+    if (document.getElementById("animal1").checked){
+      s += 1
+
+    }
+    else if (document.getElementById("animal2").checked) {
+      l += 1
+
+    }
+    else if (document.getElementById("animal3").checked) {
+      Ba += 1
+
+    }
+    else if (document.getElementById("animal4").checked) {
+      Bl += 1
+
+    }
+
+
+    var p;
+    var q;
+    var pFruit;
+    var qFruit;
+    var finalFruit;
+
+    if (s > Bl){
+      p = s;
+      pFruit = "Strawberry";
+
+    }
+    else {
+      p = Bl;
+      pFruit = "Blueberry";
+    }
+
+
+
+    if (Ba > l){
+      q = Ba;
+      qFruit = "Banana";
+    }
+    else {
+      q = l;
+      qFruit = "Lime";
+    }
+
+
+
+    if (q > p) {
+      //here should be finalFruit = qFruit;
+      finalFruit = qFruit;
+
+    }
+    else {
+      //here should be finalFruit = pFruit;
+      finalFruit = pFruit;
+    }
+
+
+    if (finalFruit == "Lime") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Lime!" ;
+      document.getElementById("limePic").style.display = "block";
+    }
+    else if (finalFruit == "Strawberry") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Strawberry!";
+      document.getElementById("strawberryPic").style.display = "block";
+
+    }
+    else if (finalFruit == "Blueberry") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Blueberry!";
+      document.getElementById("blueberryPic").style.display = "block";
+
+    }
+    else if (finalFruit == "Banana") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Banana!";
+      document.getElementById("bananaPic").style.display = "block";
+
+    }
+
+
+
+
+  }
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
