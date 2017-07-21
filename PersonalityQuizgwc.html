@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Personality Quiz </title>
+<style>
+
+</style>
+</head>
+
+<body>
+<h1 align="center"> Personality Quiz </h1>
+
+
+
+<div id = "myDiv">
+
+
+  1. What is your favorite color:
+  <br/ >
+  <br />
+  <input type="radio" id= "radio1" name="myRadio"> red <br/ >
+  <input type="radio" id= "radio2" name="myRadio"> blue<br/ >
+  <input type="radio" id= "radio3" name="myRadio"> yellow <br/ >
+  <input type="radio" id= "radio4" name="myRadio"> green <br/ >
+  <br/ >
+  <br />
+  2. What summer activity do you most enjoy:
+  <br/ >
+  <br />
+  <input type="radio" id= "radio5" name="myRadio1"> Hiking <br/ >
+  <input type="radio" id= "radio6" name="myRadio1"> Swimming <br/ >
+  <input type="radio" id= "radio7" name="myRadio1"> Eating <br/ >
+  <input type="radio" id= "radio8" name="myRadio1"> Camping <br/ >
+  <br/ >
+  <br />
+  3. Which place do you most enjoy:
+  <br/ >
+  <br />
+  <input type="radio" id= "radio5" name="myRadio2"> School <br/ >
+  <input type="radio" id= "radio6" name="myRadio2"> Mall <br/ >
+  <input type="radio" id= "radio7" name="myRadio2"> <br/ >
+  <input type="radio" id= "radio8" name="myRadio2"><br/ >
+
+  <br/ >
+  <br/ >
+  <input type="button" value = "submit" onclick="getRadioInput()">
+  <img src= "https://images-na.ssl-images-amazon.com/images/I/61Xm8hLpiBL._SL1000_.jpg" width="128" height="100" style="display: none" id="limePic">
+  <img src= "http://www.adagio.com/images5/flavor_thumbnail/strawberry.jpg" width="128" height="100" style="display: none" id="strawberryPic">
+  <img src= "https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/articles/2017/01/blueberrybush_1000.jpg" width="128" height="100" style="display: none" id="blueberryPic">
+  <img src= "https://saltmarshrunning.com/wp-content/uploads/2014/09/bananasf.jpg" width="128" height="100" style="display: none" id="bananaPic">
+
+
+</div>
+
+<script type = "text/javascript">
+
+
+  function getRadioInput(){
+    //var input = document.getElementById("myText1").value;
+
+
+    /*
+    if (input == "Pie" || input == "pie" && document.getElementById("radio1").checked){
+      document.getElementById("myDiv").innerHTML += "<br />" + "<br />" + input + " is gross"
+
+    }
+    else{
+      document.getElementById("myDiv").innerHTML += "<br />" + "<br />" + dessertString + input;
+  }
+*/
+    var resultString = "You are ";
+    var Bl=0;
+    var s =0;
+    var l =0;
+    var Ba=0;
+
+    if (document.getElementById("radio1").checked){
+      s+=1
+      //document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Strawberry!";
+      //document.getElementById("strawberryPic").style.display = "block";
+    }
+    else if (document.getElementById("radio2").checked) {
+      Bl+=1
+      //document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Blueberry!";
+      //document.getElementById("blueberryPic").style.display = "block";
+    }
+    else if (document.getElementById("radio3").checked) {
+      Ba+=1
+    //  document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Banana!";
+    //  document.getElementById("bananaPic").style.display = "block";
+
+    }
+    else if (document.getElementById("radio4").checked) {
+      l+=1
+      //document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Lime!" ;
+      //document.getElementById("limePic").style.display = "block";
+  }
+    if ((s>Bl) && (s>Ba) && (s>l)){
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Strawberry!";
+      document.getElementById("strawberryPic").style.display = "block";
+
+      }
+    else if ((Bl>s) && (Bl>l) && (Bl>Ba)) {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Blueberry!";
+      document.getElementById("blueberryPic").style.display = "block";
+    }
+    else if ((Ba>s) && (Ba>Bl) && (Ba>l)) {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Banana!";
+      document.getElementById("bananaPic").style.display = "block";
+    }
+    else if ((l>s) && (l>Ba) && (l>Bl)) {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Lime!" ;
+      document.getElementById("limePic").style.display = "block";
+    }
+
+
+  }
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
