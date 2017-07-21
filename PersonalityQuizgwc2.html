@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+<head style="font-family:arial;">
+
+<title> Personality Quiz </title>
+<style>
+</style>
+</head>
+
+<body>
+<h1 align="center"> Personality Quiz </h1>
+
+
+
+<div id = "myDiv" style="font-family:arial;">
+
+
+  1. What is your favorite color:
+  <br/ >
+  <br />
+  <input type="radio" id= "color1" name="colorQuestion"> red <br/ >
+  <input type="radio" id= "color2" name="colorQuestion"> blue <br/ >
+  <input type="radio" id= "color3" name="colorQuestion"> yellow <br/ >
+  <input type="radio" id= "color4" name="colorQuestion"> green <br/ >
+  <br/ >
+  <br />
+  2. What summer activity do you most enjoy:
+  <br/ >
+  <br />
+  <input type="radio" id= "activity1" name="activityQuestion"> Hiking <br/ >
+  <input type="radio" id= "activity2" name="activityQuestion"> Swimming <br/ >
+  <input type="radio" id= "activity3" name="activityQuestion"> Eating <br/ >
+  <input type="radio" id= "activity4" name="activityQuestion"> Camping <br/ >
+  <br/ >
+  <br />
+  3. What is your favorite movie:
+  <br/ >
+  <br />
+  <input type="radio" id= "movie1" name="movieQuestion"> High School Musical <br/ >
+  <input type="radio" id= "movie2" name="movieQuestion"> The Notebook <br/ >
+  <input type="radio" id= "movie3" name="movieQuestion"> Avengers <br/>
+  <input type="radio" id= "movie4" name="movieQuestion"> Mean Girls <br/>
+
+  <br/ >
+  <br/ >
+  4. Which Superhero are you:
+  <br/ >
+  <br />
+  <input type="radio" id= "hero1" name="heroQuestion"> Hulk <br/ >
+  <input type="radio" id= "hero2" name="heroQuestion"> Superman <br/ >
+  <input type="radio" id= "hero3" name="heroQuestion"> Captain America <br/>
+  <input type="radio" id= "hero4" name="heroQuestion"> Batman <br/>
+
+  <br/ >
+  <br/ >
+  5. Which is your spirit animal:
+  <br/ >
+  <br />
+  <input type="radio" id= "animal1" name="animalQuestion"> Dolphin <br/ >
+  <input type="radio" id= "animal2" name="animalQuestion"> Squirrel <br/ >
+  <input type="radio" id= "animal3" name="animalQuestion"> gorilla <br/>
+  <input type="radio" id= "animal4" name="animalQuestion"> Honey Bee <br/>
+
+  <br/ >
+  <br/ >
+  <input type="button" value = "submit" onclick="getRadioInput()">
+  <img src= "https://images-na.ssl-images-amazon.com/images/I/61Xm8hLpiBL._SL1000_.jpg" width="128" height="100" style="display: none" id="limePic">
+  <img src= "http://www.adagio.com/images5/flavor_thumbnail/strawberry.jpg" width="128" height="100" style="display: none" id="strawberryPic">
+  <img src= "https://www.rodalesorganiclife.com/sites/rodalesorganiclife.com/files/articles/2017/01/blueberrybush_1000.jpg" width="128" height="100" style="display: none" id="blueberryPic">
+  <img src= "https://saltmarshrunning.com/wp-content/uploads/2014/09/bananasf.jpg" width="128" height="100" style="display: none" id="bananaPic">
+
+
+</div>
+
+<script type = "text/javascript">
+  function getRadioInput(){
+    var resultString = "You are ";
+    var Bl=0;
+    var s =0;
+    var l =0;
+    var Ba=0;
+    if (document.getElementById("color1").checked){
+      s += 1
+    }
+    else if (document.getElementById("color2").checked) {
+      Bl += 1
+    }
+    else if (document.getElementById("color3").checked) {
+      Ba += 1
+    }
+    else if (document.getElementById("color4").checked) {
+      l += 1
+    }
+    if (document.getElementById("activity1").checked){
+      Ba += 1
+    }
+    else if (document.getElementById("activity2").checked) {
+      Bl += 1
+    }
+    else if (document.getElementById("activity3").checked) {
+      s += 1
+    }
+    else if (document.getElementById("activity4").checked) {
+      l += 1
+    }
+    if (document.getElementById("movie1").checked){
+      s += 1
+    }
+    else if (document.getElementById("movie2").checked) {
+      Ba += 1
+    }
+    else if (document.getElementById("movie3").checked) {
+      Bl += 1
+    }
+    else if (document.getElementById("movie4").checked) {
+      l += 1
+    }
+    if (document.getElementById("hero1").checked){
+      l += 1
+    }
+    else if (document.getElementById("hero2").checked) {
+      Bl += 1
+    }
+    else if (document.getElementById("hero3").checked) {
+      s += 1
+    }
+    else if (document.getElementById("hero4").checked) {
+      Ba += 1
+    }
+    if (document.getElementById("animal1").checked){
+      s += 1
+    }
+    else if (document.getElementById("animal2").checked) {
+      l += 1
+    }
+    else if (document.getElementById("animal3").checked) {
+      Ba += 1
+    }
+    else if (document.getElementById("animal4").checked) {
+      Bl += 1
+    }
+  /*  if ((s>Bl) && (s>Ba) && (s>l)){
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Strawberry!";
+      document.getElementById("strawberryPic").style.display = "block";
+      }
+    else if ((Bl>s) && (Bl>l) && (Bl>Ba)) {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Blueberry!";
+      document.getElementById("blueberryPic").style.display = "block";
+    }
+    else if ((Ba>s) && (Ba>Bl) && (Ba>l)) {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Banana!";
+      document.getElementById("bananaPic").style.display = "block";
+    }
+    else if ((l>s) && (l>Ba) && (l>Bl)) {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Lime!" ;
+      document.getElementById("limePic").style.display = "block";
+    }
+*/
+    var p;
+    var q;
+    var pFruit;
+    var qFruit;
+    var finalFruit;
+    if (s > Bl){
+      p = s;
+      pFruit = "Strawberry";
+    }
+    else {
+      p = Bl;
+      pFruit = "Blueberry";
+    }
+    if (Ba > l){
+      q = Ba;
+      qFruit = "Banana";
+    }
+    else {
+      q = l;
+      qFruit = "Lime";
+    }
+    if (q > p) {
+      //here should be finalFruit = qFruit;
+      finalFruit = qFruit;
+    }
+    else {
+      //here should be finalFruit = pFruit;
+      finalFruit = pFruit;
+    }
+    if (finalFruit == "Lime") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Lime!" ;
+      document.getElementById("limePic").style.display = "block";
+    }
+    else if (finalFruit == "Strawberry") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Strawberry!";
+      document.getElementById("strawberryPic").style.display = "block";
+    }
+    else if (finalFruit == "Blueberry") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Blueberry!";
+      document.getElementById("blueberryPic").style.display = "block";
+    }
+    else if (finalFruit == "Banana") {
+      document.getElementById("myDiv").innerHTML += "<br/ >" + resultString + "a Banana!";
+      document.getElementById("bananaPic").style.display = "block";
+    }
+  }
+</script>
+
+</body>
+
+</html>
