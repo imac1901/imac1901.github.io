@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Mad Libs </title>
+
+</head>
+
+<body>
+<h1 align="center"> Mad Libs </h1>
+
+
+<div id = "myDiv1">
+
+  <p> name
+  <input type="text" name="baseinput" id="myText1">
+  </p>
+
+</div>
+
+
+<div id = "myDiv2">
+  <p> place
+  <input type="text" name="baseinput" id="myText2">
+  </p>
+
+</div>
+
+<div id = "myDiv3">
+  <p> verb
+  <input type="text" name="baseinput" id="myText3">
+</p>
+
+</div>
+
+<div id = "myDiv4">
+  <p> adjective
+  <input type="text" name="baseinput" id="myText4">
+</p>
+
+</div>
+
+<div id = "myDiv5">
+  <p> place
+  <input type="text" name="baseinput" id="myText5">
+</p>
+
+</div>
+
+<div id = "myDiv">
+    <input type="button" value = "submit" onclick="getTextInput()">
+
+  </div>
+
+<script type = "text/javascript">
+
+
+  function getTextInput(){
+    var input = document.getElementById("myText1").value;
+    var input2 = document.getElementById("myText2").value;
+    var input3 = document.getElementById("myText3").value;
+    var input4 = document.getElementById("myText4").value;
+    var input5 = document.getElementById("myText5").value;
+
+    var firstString = " left the "
+    var secondString = " in order to "
+    var thirdString = " at the "
+    document.getElementById("myDiv").innerHTML += "<br />" + "<br />"  + input + firstString + input2 + secondString
+    + input3 + thirdString + input4 + " " + input5;
+
+  }
+
+
+
+
+
+</script>
+
+</body>
+
+</html>
