@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+  <title>Ubbi Dubbi Example</title>
+
+</head>
+
+<body>
+
+<h1 align="center"> Ubbi Dubbi Translator</h1>
+
+<div id="myDiv" style="font-family:arial;">
+  <input type="text" name="Translator"  id="textBox">
+  <br/>
+  <br/>
+  <input type="button" value="Submit" onclick= getTextInput()>
+
+</div>
+
+<script type= "text/javascript">
+  function getTextInput(){
+      var outString = "";
+      var input = document.getElementById("textBox").value;
+      for (var i=0; i< input.length; i+=1){
+        if (input.charAt(i)=="a"){
+          outString += "ub" + input.charAt(i);
+        }
+        else if (input.charAt(i) == "e"){
+          outString += "ub" + input.charAt(i);
+        }
+        else if (input.charAt(i) == "i"){
+          outString += "ub" + input.charAt(i);
+        }
+        else if (input.charAt(i) == "o"){
+          outString += "ub" + input.charAt(i);
+        }
+        else if (input.charAt(i) == "u"){
+          outString += "ub" + input.charAt(i);
+        }
+        else{
+          outString += input.charAt(i);
+        }
+      }
+      document.getElementById("myDiv").innerHTML += "<br/>" + "<br/>" +outString;
+    }
+</script>
+
+</body>
+
+</html>
